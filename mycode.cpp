@@ -9,3 +9,9 @@ int main(int argc, char* argv[]) {
     string message = "";
     string line;
     while (getline(cin, line)) {
+    message += line;
+    }
+
+ string encoded = "";
+ for (char c : message) {
+    if (isalpha(c)) {
