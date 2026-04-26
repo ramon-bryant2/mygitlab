@@ -26,3 +26,19 @@ int main(int argc, char* argv[]) {
     while (pos < len) {
         string block = encoded.substr(pos, 5);
         cout << block;
+        pos += 5;
+        blocksOnLine++;
+        if (pos < len) {
+            if (blocksOnLine == 10) {
+                cout << "\n";
+                blocksOnLine = 0;}
+                else {
+                cout << " ";
+            }
+        }
+    }
+    cout << "\n";
+    return 0;
+}
+EOF
+cd ~/workspace && g++ -o caesar caesar.cpp
